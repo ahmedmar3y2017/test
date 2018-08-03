@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:body>
+
+    hello ahmed
+
+    <f:view>
+        <h:form>
+            <h:panelGrid id="panel1" columns="2" border="1" cellpadding="5" cellspacing="1">
+                <f:facet name="header">
+                    <h:outputText value="Add Customer Information"/>
+                </f:facet>
+                <h:outputLabel value="First Name :"/>
+                <h:inputText value="#{customerBean.customer.firstName}" id="First"/>
+                <h:outputLabel value="Last Name :"/>
+                <h:inputText value="#{customerBean.customer.lastName}" id="Last"/>
+                <h:outputLabel value="email"/>
+                <h:inputText value="#{customerBean.customer.email}" id="email"/>
+                <f:facet name="footer">
+                    <!--<h:outputLabel value="#{NewClass.msg}" id="msg" styleClass="msg"/>-->
+                    <h:commandButton value="Save" action="#{customerBean.saveCustomer()}"/>
+
+
+                </f:facet>
+            </h:panelGrid>
+        </h:form>
+    </f:view>
+
+</h:body>
+
+</html>
